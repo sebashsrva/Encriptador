@@ -1,0 +1,189 @@
+:root {
+    --primary-color: #2a3a5f;  /* Color principal */
+    --secondary-color: #f0f4f8; /* Color secundario */
+    --accent-color: #e0e0e0;   /* Color de acento */
+    --text-color: #ffffff;      /* Color de texto claro */
+    --dark-text-color: #2a3a5f; /* Color de texto oscuro */
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background-color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Logo alura */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;  
+    height: auto;
+}
+
+/* Estilos del encabezado */
+header h1 {
+    color: var(--primary-color);
+    font-size: 36px;
+}
+
+/* Sección de contenido */
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Sección de entrada de texto */
+.input-section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-section h2 {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 120px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Botones de encriptar y desencriptar */
+#encryptBtn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+#decryptBtn {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Sección de salida de texto */
+.output-section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#outputText {
+    font-size: 16px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+#copyBtn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-section, .output-section {
+        width: 100%;
+    }
+
+    textarea {
+        height: 100px;
+    }
+    
+}
+
+/* Modificacion para Tablets */
+@media (max-width: 768px) {
+    .logo {
+        width: 80px; /* Reduce el tamaño del logo para tablets */
+        top: 15px;
+        left: 15px;
+    }
+    .muneco-img {
+        width: 80%;
+    }
+    /* Ajusta otros estilos aquí para tablets */
+}
+
+/* modificacion para Móviles */
+@media (max-width: 480px) {
+    .logo {
+        width: 60px; /* Reduce aún más el tamaño del logo para móviles */
+        top: 10px;
+        left: 10px;
+    }
+    .muneco-img {
+        width: 80%;
+    }
+    /* Ajusta otros estilos aquí para móviles */
+}
+
+.social-footer {
+    display: flex;             
+    justify-content: center;   
+    align-items: center;    
+    padding: 10px;
+    background-color: var(--primary-color); 
+    width: 100%;             
+    position: fixed;       
+    bottom: 0;       
+    left: 0;               
+    z-index: 1000;      
+}
+
+.social-icon {
+    width: 40px;
+    height: auto;
+    margin: 0 15px;      
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.3);     /* Efecto hover */
+}
